@@ -1,0 +1,156 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+div .swiper {
+  padding: 50px 0;
+}
+
+.card-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #fff;
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  background-color: #fff;
+  max-width: 150px;
+  padding-top: 20px;
+  padding-left: 20;
+  padding-right: 20;
+  padding-bottom: 50px;
+  width: 100%;
+  border-radius: 15px;
+  display: flex ;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  height: 350px;
+  color: #fff;
+  margin: 0 30px;
+  transition: 0.3s ease-in-out;
+  transition-duration: 0.5s;
+  position: relative;
+  /* overflow: hidden; */
+  cursor: pointer;
+}
+
+/* .card:active{
+  position: absolute;
+  left: 0;
+  transform: translateX(100%);
+} */
+
+.card img {
+  max-width: 200px;
+  width: full;
+  transition: 0.5s;
+  
+}
+
+.card:hover {
+  transform: scale(1.2);
+  background: #3F4870;
+}
+
+.card h1 {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+
+.card:hover img{
+  transition: 0.5s;
+  transform: scale(1.3);
+}
+
+.backname {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-115%);
+  font-size: 110px;
+  font-weight: 700;
+  color: #2a304c;
+  display: none;
+  z-index: -99;
+}
+
+.card:hover .backname {
+  display: block;
+}
+
+.card button {
+  padding: 10px 15px;
+  background-color: #ff534d;
+  border: none;
+  border-radius: 10px;
+  font-size: 24px;
+  outline: none;
+  color: #fff;
+  font-weight: 200;
+}
+
+.price-add {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  opacity: 0;
+}
+
+.card:hover .price-add{
+  opacity: 1;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-right: 20px;
+}
+
+.price span {
+  color: #838795;
+  font-size: 14px;
+}
+
+.price p {
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.active {
+  margin-right: 1000px;
+  scale: 1.2;
+}
+
+.active {
+  transform: scale(1.2);
+  background: #3F4870;
+}
+.active img{
+  transition: 0.5s;
+  transform: scale(1.3);
+}
+.active .backname {
+  display: block;
+}
+.active .price-add{
+  opacity: 1;
+}
+
+div .swiper-wrapper {
+  padding: 50px 0;
+}
