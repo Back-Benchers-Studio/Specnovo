@@ -1,5 +1,6 @@
 import {Swiper,SwiperSlide } from "swiper/react"
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { BrowserView, MobileView, isBrowser, isMobile } from 'react-device-detect';
 import 'swiper/css';
 import {Link} from 'react-router-dom'
 import 'swiper/css/navigation';
@@ -16,8 +17,17 @@ import pc7 from '../assets/cases/case7.png'
 
 import PreviewCard from "../components/PreviewCard"
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 const transition = { type: 'spring', duration: 2 ,delay:0.1}
 function Shop(){
+
+  const [mobile,setMobile] = useState(isMobile)
+  useEffect(()=>{
+    document.addEventListener('resize',()=>{
+      setMobile(isMobile)
+    })
+    
+  },)
     return(
         <motion.div 
         initial={{ opacity: 0, x: -100 }} animate={{ opacity: 1, x: 0 ,zIndex:2}} transition={transition}
@@ -25,11 +35,22 @@ function Shop(){
         <Swiper
         modules={[Scrollbar]}
         spaceBetween={100}
-        slidesPerView={4.5}
+        slidesPerView={mobile?1:4}
         loop={true}
         speed={600}
         >
-        <SwiperSlide><PreviewCard stock={false} price={80} size={8} name={'MSI MAG VAMPIRIC 100R Midi Tower Case'} image={pc1}/></SwiperSlide>
+        <SwiperSlide>
+
+          <PreviewCard
+            stock={false}
+            price={80}
+            size={8}
+            name={'MSI MAG VAMPIRIC 100R Midi Tower Case'}
+            image={pc1}
+          />
+
+        </SwiperSlide>
+
         <SwiperSlide><PreviewCard stock price={150} size={7} name={'NZXT H5 Flow RGB Black Midi Tower Behuizing'} image={pc2}/></SwiperSlide>
         <SwiperSlide><PreviewCard stock price={150} size={6.5} name={'Fractal Design Pop Air RGB Black TG Clear Tint Midi Tower'} image={pc3}/></SwiperSlide>
         <SwiperSlide><PreviewCard stock price={200} size={12} name={'Antec NX 410 Midi Tower'} image={pc4}/></SwiperSlide>
