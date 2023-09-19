@@ -31,10 +31,6 @@ function Shop() {
       setMobile(isMobile);
     });
   });
-  console.log("State to be sent:", {
-    price: 80,
-    name: "MSI MAG VAMPIRIC 100R Midi Tower Case",
-  });
   return (
     <motion.div
       initial={{ opacity: 0, x: -100 }}
@@ -46,18 +42,12 @@ function Shop() {
         modules={[Scrollbar]}
         spaceBetween={100}
         slidesPerView={mobile ? 1 : 4}
-        loop={true} 
+        loop={true}
         speed={600}
       >
         <SwiperSlide>
           <Link
-            to={{
-              pathname: "/config",
-              state: {
-                price: 80,
-                name: "MSI MAG VAMPIRIC 100R Midi Tower Case",
-              },
-            }}
+            to={`/config?name=${"MSI MAG VAMPIRIC 100R Midi Tower Case"}&price=${80}`}
           >
             <PreviewCard
               stock={false}
@@ -70,180 +60,125 @@ function Shop() {
         </SwiperSlide>
 
         <SwiperSlide>
-        <Link
-            to={{
-              pathname: "/config",
-              state: {
-                price: 150,
-                name: "NZXT H5 Flow RGB Black Midi Tower Behuizing",
-              },
-            }}
+          <Link
+            to={`/config?name=${"NZXT H5 Flow RGB Black Midi Tower Behuizing"}&price=${150}`}
           >
-          <PreviewCard
-            stock
-            price={150}
-            size={7}
-            name={"NZXT H5 Flow RGB Black Midi Tower Behuizing"}
-            image={pc2}
-          />
+            <PreviewCard
+              stock
+              price={150}
+              size={7}
+              name={"NZXT H5 Flow RGB Black Midi Tower Behuizing"}
+              image={pc2}
+            />
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-        <Link
-            to={{
-              pathname: "/config",
-              state: {
-                price: 150,
-                name: "Fractal Design Pop Air RGB Black TG Clear Tint Midi Tower",
-              },
-            }}
+          <Link
+            to={`/config?name=${"Fractal Design Pop Air RGB Black TG Clear Tint Midi Tower"}&price=${150}`}
           >
-          <PreviewCard
-            stock
-            price={150}
-            size={6.5}
-            name={"Fractal Design Pop Air RGB Black TG Clear Tint Midi Tower"}
-            image={pc3}
-          />
+            <PreviewCard
+              stock
+              price={150}
+              size={6.5}
+              name={"Fractal Design Pop Air RGB Black TG Clear Tint Midi Tower"}
+              image={pc3}
+            />
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-        <Link
-            to={{
-              pathname: "/config",
-              state: {
-                price: 200,
-                name: "Antec NX 410 Midi Tower",
-              },
-            }}
+          <Link
+            to={`/config?name=${"Antec NX 410 Midi Tower"}&price=${200}`}
           >
-          <PreviewCard
-            stock
-            price={200}
-            size={12}
-            name={"Antec NX 410 Midi Tower"}
-            image={pc4}
-          />
+            <PreviewCard
+              stock
+              price={200}
+              size={12}
+              name={"Antec NX 410 Midi Tower"}
+              image={pc4}
+            />
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-        <Link
-            to={{
-              pathname: "/config",
-              state: {
-                price: 120,
-                name: "Phanteks Eclipse G300A Black 3-fan Midi Tower Behuizing",
-              },
-            }}
+          <Link
+            to={`/config?name=${"Phanteks Eclipse G300A Black 3-fan Midi Tower Behuizing"}&price=${120}`}
           >
-          <PreviewCard
-            stock
-            price={120}
-            size={10}
-            name={"Phanteks Eclipse G300A Black 3-fan Midi Tower Behuizing"}
-            image={pc5}
-          />
+            <PreviewCard
+              stock
+              price={120}
+              size={10}
+              name={"Phanteks Eclipse G300A Black 3-fan Midi Tower Behuizing"}
+              image={pc5}
+            />
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-        <Link
-            to={{
-              pathname: "/config",
-              state: {
-                price: 100,
-                name: "DeepCool CC560 A-RGB Midi Tower",
-              },
-            }}
+          <Link
+            to={`/config?name=${"DeepCool CC560 A-RGB Midi Tower"}&price=${100}`}
           >
-          <PreviewCard
-            stock
-            price={100}
-            size={9}
-            name={"DeepCool CC560 A-RGB Midi Tower"}
-            image={pc6}
-          />
+            <PreviewCard
+              stock
+              price={100}
+              size={9}
+              name={"DeepCool CC560 A-RGB Midi Tower"}
+              image={pc6}
+            />
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-        <Link
-            to={{
-              pathname: "/config",
-              state: {
-                price: 300,
-                name: "be quiet! Pure Base 500DX Black Midi Tower",
-              },
-            }}
+          <Link
+            to={`/config?name=${"be quiet! Pure Base 500DX Black Midi Tower"}&price=${300}`}
           >
-          <PreviewCard
-            stock
-            price={300}
-            size={6}
-            name={"be quiet! Pure Base 500DX Black Midi Tower"}
-            image={pc7}
-          />
+            <PreviewCard
+              stock
+              price={300}
+              size={6}
+              name={"be quiet! Pure Base 500DX Black Midi Tower"}
+              image={pc7}
+            />
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-        <Link
-            to={{
-              pathname: "/config",
-              state: {
-                price: 80,
-                name: "MSI MAG VAMPIRIC 100R Midi Tower Case",
-              },
-            }}
+          <Link
+            to={`/config?name=${"MSI MAG VAMPIRIC 100R Midi Tower Case"}&price=${80}`}
           >
-          <PreviewCard
-            stock
-            price={80}
-            size={8}
-            name={"MSI MAG VAMPIRIC 100R Midi Tower Case"}
-            image={pc1}
-          />
+            <PreviewCard
+              stock
+              price={80}
+              size={8}
+              name={"MSI MAG VAMPIRIC 100R Midi Tower Case"}
+              image={pc1}
+            />
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-        <Link
-            to={{
-              pathname: "/config",
-              state: {
-                price: 150,
-                name: "NZXT H5 Flow RGB Black Midi Tower Behuizing",
-              },
-            }}
+          <Link
+            to={`/config?name=${"NZXT H5 Flow RGB Black Midi Tower Behuizing"}&price=${150}`}
           >
-          <PreviewCard
-            stock
-            price={150}
-            size={7}
-            name={"NZXT H5 Flow RGB Black Midi Tower Behuizing"}
-            image={pc2}
-          />
+            <PreviewCard
+              stock
+              price={150}
+              size={7}
+              name={"NZXT H5 Flow RGB Black Midi Tower Behuizing"}
+              image={pc2}
+            />
           </Link>
         </SwiperSlide>
         <SwiperSlide>
-        <Link
-            to={{
-              pathname: "/config",
-              state: {
-                price: 150,
-                name: "Fractal Design Pop Air RGB Black TG Clear Tint Midi Tower",
-              },
-            }}
+          <Link
+            to={`/config?name=${"Fractal Design Pop Air RGB Black TG Clear Tint Midi Tower"}&price=${150}`}
           >
-          <PreviewCard
-            stock
-            price={150}
-            size={6.5}
-            name={"Fractal Design Pop Air RGB Black TG Clear Tint Midi Tower"}
-            image={pc3}
-          />
+            <PreviewCard
+              stock
+              price={150}
+              size={6.5}
+              name={"Fractal Design Pop Air RGB Black TG Clear Tint Midi Tower"}
+              image={pc3}
+            />
           </Link>
         </SwiperSlide>
       </Swiper>
     </motion.div>
   );
-  
 }
 
 export default Shop;

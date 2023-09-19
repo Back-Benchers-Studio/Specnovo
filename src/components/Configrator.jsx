@@ -13,8 +13,9 @@ const config = {
 };
 function Configrator() {
   const location = useLocation();
-  const price = location.state?.price || 'N/A';
-  const name = location.state?.name || 'N/A';
+  const searchParams = new URLSearchParams(location.search);
+  const name = searchParams.get('name');
+  const price = searchParams.get('price');
   console.log(location)
 
   useEffect(() => {
