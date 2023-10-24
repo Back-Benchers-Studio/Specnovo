@@ -21,64 +21,66 @@ div .swiper {
 .card-wrapper {
   width: 100vw;
   height: 100vh;
-  background-color: #fff;
+  background-color: #1A1A1C;;
   display: flex ;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
+  position: relative;
 }
 /* here ya mazen */
 .card{
-  background-color: #fff;
-  max-width: 200px;
+  background-color: transparent;
+  max-width: 320px;
   padding-top: 20px;
   padding-left: 20;
   padding-right: 20;
   padding-bottom: 50px;
   width: 100%;
-  border-radius: 15px;
+  border-radius: 10px;
   display: flex ;
   justify-content: start;
   align-items: center;
   flex-direction: column;
-  height: 500px;
+  height: fit-content;
   color: #fff;
   margin: 0 30px;
   transition: 0.3s ease-in-out;
   transition-duration: 0.5s;
   position: relative;
-  /* overflow: hidden; */
+  /* margin-top: 20px; */
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  /* .card {
-    max-width: 300px;
-  } */
-}
-
-/* .card:active{
-  position: absolute;
-  left: 0;
-  transform: translateX(100%);
+/* @media (max-width: 1080px) {
+  *{
+    font-size: 5px;
+  }
 } */
 
 .card img {
-  max-width: 200px;
+  max-width: 280px;
   width: full;
   transition: 0.5s;
   margin: 30px 0;
 }
 
 .card:hover {
-  transform: scale(1.2);
-  background: #3F4870;
+  transform: scale(1.2);background: rgb(82,82,156);
+  background: linear-gradient(174deg, rgba(82,82,156,1) 20%, rgba(255,255,255,1) 100%);
 }
 
 .card h1 {
-  font-size: 16px;
-  margin-bottom: 20px;
+  color: #FFF;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
 }
 
+.card:hover .card h1 {
+  color: #000;
+}
 
 .card:hover img{
   transition: 0.5s;
@@ -101,25 +103,35 @@ div .swiper {
 .card:hover .backname {
   display: block;
 }
-
-.card button {
-  padding: 10px 15px;
-  background-color: #ff534d;
+.controler-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+.card .controler-btns button {
+  padding: 10px;
+  background-color: #615DC5;
   border: none;
-  border-radius: 10px;
-  font-size: 24px;
+  border-radius: 15px;
+  font-size: 16px;
   outline: none;
   color: #fff;
   font-weight: 200;
 }
 
+.card:hover .controler-btns button:nth-child(1){
+  background-color: #ff534d;
+}
+
 .price-add {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 5px;
   align-items: center;
   flex-direction: row;
-  opacity: 0;
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 .card:hover .price-add{
@@ -127,11 +139,12 @@ div .swiper {
 }
 
 .price {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  margin-right: 50px;
+  /* margin-right: 50px; */
 }
 
 .price span {
@@ -140,11 +153,15 @@ div .swiper {
 }
 
 .price p {
-  font-size: 24px;
-  font-weight: 200;
+  color: #615DC5;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
 }
 
-.active {
+/* .active {
   margin-right: 1000px;
   scale: 1.2;
 }
@@ -162,8 +179,55 @@ div .swiper {
 }
 .active .price-add{
   opacity: 1;
+} */
+
+.bolb{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  z-index: -1;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  opacity: 0.5;
+  filter: blur(100px);
+  background: #201F46;
+  filter: blur(50px);
+}
+#bolb1{
+  top: 0;
+  left:0;
+  width: 600px;
+  height: 600px;
+  transform: translate(-40%,-10%);
+}
+#bolb2{
+  bottom: 0;
+  right:0;
+  width: 600px;
+  height: 600px;
+  transform: translate(50%,0%);
 }
 
 div .swiper-wrapper {
   padding: 50px 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  .price-add{
+    flex-direction: column;
+  }
+  .price{
+    align-items: center;
+    text-align: center;
+    gap:10px;
+    margin-bottom: 5px;
+
+  }
+  .card:hover {
+    transform: scale(1.01);
+  }
+  .card:hover img{
+    transform: scale(1.8);
+  }
 }
