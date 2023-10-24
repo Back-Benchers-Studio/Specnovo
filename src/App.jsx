@@ -9,6 +9,7 @@ import Configrator from "./components/Configrator";
 import { useLocation } from "react-router-dom";
 import Shop from "./pages/Shop";
 import { useEffect, useState } from "react";
+import Login from "./pages/Login";
 let App = ()=>{
     let location = useLocation()
     let [currentLocation,setCurrentLocation] = useState(location.pathname)
@@ -19,11 +20,12 @@ let App = ()=>{
         <>
         <Header/>
          <Header/>
-         <Canvas location={currentLocation} />
+         {/* <Canvas location={currentLocation} /> */}
              <Routes>
                 <Route path="/" element={<Overlay  />}/>
                 <Route path="/config" element={<Configrator />} />
                 <Route path="/shop" element={<Shop />} />
+                <Route path="/login" element={<Login />} />
             </Routes>
         </>
        
